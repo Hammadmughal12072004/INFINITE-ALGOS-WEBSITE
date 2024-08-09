@@ -1,0 +1,190 @@
+p.hiring {
+    display: flex;
+    height: 100vh; /* Full screen height */
+    background-color: #F0F0F0; /* White background */
+    color: #28282B; /* Dark color for text */
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .hiring .text-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .hiring .image-content {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Align image to the right */
+    align-items: center;
+    padding: 20px; /* Add padding for spacing */
+  }
+  
+  .hiring .image-content img {
+    width: auto; /* Ensures image retains aspect ratio */
+    height: auto; /* Ensures image retains aspect ratio */
+    max-width: 100%; /* Limits image size to container width */
+    max-height: 100%; /* Limits image size to container height */
+    border-radius: 15px;
+    object-fit: cover; /* Ensures the image covers the entire container */
+  }
+  
+  .hiring .main-title {
+    text-align: left; /* Align title to the left */
+    color: #000000; /* Dark blue color for title */
+    font-size: 36px; /* Larger font size for main title */
+    margin-bottom: 20px;
+  }
+
+  .hiring .sub-title {
+    color: #000000; /* Dark blue color for subtitles */
+    font-size: 24px; /* Font size for subtitles */
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .hiring .requirements-list,
+  .hiring .benefits-list {
+    color: #333; /* Lighter shade of black */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    font-weight: 300; /* Slimmer font weight */
+    margin-bottom: 20px;
+
+
+    list-style-type: circle;
+    margin-left: 20px;
+    margin-bottom: 24px;
+  }
+
+  .hiring .btn {
+    height: 60px;
+    width: 180px;
+    background-color: #8906e6; /* Purple color */
+    color: white;
+    border-radius: 10px; /* Rounded button */
+    outline: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 18px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .hiring .btn:hover {
+    background-color: #6a0570; /* Darker shade of purple on hover */
+  }
+  
+  .hiring .main-p {
+    color: #333; /* Lighter shade of black */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    font-weight: 300; /* Slimmer font weight */
+    margin-bottom: 20px;
+  }
+  @media (max-width: 768px) {
+    .hiring {
+  display: flex;
+  flex-direction: column; /* Stack content vertically on small screens */
+  height: auto; /* Adjust height based on content */
+  background-color: #F0F0F0; /* White background */
+  color: #28282B; /* Dark color for text */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.hiring .text-content {
+  flex: none; /* No flex growth/shrink */
+  padding: 20px;
+}
+
+.hiring .image-content {
+  flex: none; /* No flex growth/shrink */
+  display: flex;
+  justify-content: center; /* Center image horizontally */
+  align-items: center;
+  padding: 20px; /* Add padding for spacing */
+}
+
+.hiring .image-content img {
+  width: 100%; /* Full width of container */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 100%; /* Limits image size to container width */
+  max-height: 100%; /* Limits image size to container height */
+  border-radius: 15px;
+  object-fit: cover; /* Ensures the image covers the entire container */
+}
+
+.hiring .main-title {
+  text-align: center; /* Center title on small screens */
+  color: #000000; /* Dark blue color for title */
+  font-size: 28px; /* Adjusted font size for smaller screens */
+  margin-bottom: 20px;
+}
+
+.hiring .sub-title {
+  color: #000000; /* Dark blue color for subtitles */
+  font-size: 20px; /* Adjusted font size for smaller screens */
+  font-weight: 500;
+
+  margin-top: 15px;
+  margin-bottom: 10px;
+  text-align: center; /* Center subtitles on small screens */
+}
+
+.hiring .requirements-list,
+.hiring .benefits-list {
+    color: #333; /* Lighter shade of black */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    font-weight: 300; /* Slimmer font weight */
+    margin-bottom: 20px;
+
+
+  list-style-type: circle;
+  margin-left: 20px;
+  padding-left: 0; /* Remove default padding on smaller screens */
+  text-align: center; /* Center list items */
+}
+
+.hiring .btn {
+  height: 50px; /* Adjusted height for smaller screens */
+  width: 150px; /* Adjusted width for smaller screens */
+  background-color: #8906e6; /* Purple color */
+  color: white;
+  border-radius: 10px; /* Rounded button */
+  outline: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 16px; /* Adjusted font size for smaller screens */
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+  display: block; /* Center align button */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hiring .btn:hover {
+  background-color: #6a0570; /* Darker shade of purple on hover */
+}
+
+.hiring .main-p {
+  color: #333; /* Lighter shade of black */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  font-weight: 300; /* Slimmer font weight */
+  margin-bottom: 20px;
+  text-align: center; /* Center paragraph text */
+}
+
+  }

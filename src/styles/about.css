@@ -1,0 +1,85 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center items vertically */
+    padding: 2rem;
+    box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+    min-height: 100vh; /* Set the minimum height to 100% of the viewport height */
+}
+
+.text-content {
+    max-width: 800px; /* Adjust as needed */
+    text-align: center;
+}
+
+.image-content {
+    margin-top: 2rem;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.about .btn {
+    height: 60px;
+    width: 180px;
+    background-color: #8906e6; /* Purple color */
+    color: white;
+    border-radius: 10px; /* Rounded button */
+    outline: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 18px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+  }
+
+@media screen and (min-width: 768px) {
+    .about {
+        flex-direction: row;
+        justify-content: center; /* Center items horizontally */
+        align-items: center; /* Center items vertically */
+    }
+
+    .text-content {
+        width: 50%; /* Adjust as needed */
+        text-align: left;
+    }
+
+    .image-content {
+        width: 50%; /* Adjust as needed */
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem; /* Reduce padding for smaller screens */
+        justify-content: center;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .text-content {
+        width: 100%; /* Ensure full width on mobile */
+        padding: 0 1rem; /* Add some padding for better readability */
+        text-align: center; /* Center text on mobile */
+    }
+
+    .image-content {
+        width: 100%; /* Ensure full width on mobile */
+        margin-top: 1rem; /* Adjust margin for smaller screens */
+    }
+
+    .about .btn {
+        width: auto; /* Allow button to adjust width automatically */
+        padding: 0.5rem 1rem; /* Adjust padding for smaller screens */
+        font-size: 1rem; /* Adjust font size for better readability on mobile */
+        margin-top: 1rem; /* Adjust margin for better spacing on mobile */
+    }
+}
