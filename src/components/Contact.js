@@ -80,7 +80,6 @@ function Contact() {
       setErrors(validationErrors);
     }
   };
-  
 
   return (
     <div className="full-screen-container">

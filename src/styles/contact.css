@@ -10,10 +10,11 @@ body, html {
 .full-screen-container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* Changed from center to flex-start */
     width: 100%;
     height: 100vh; /* Ensure it takes full height of the viewport */
     padding: 20px;
+    padding-top: 80px; /* Increased padding to the top */
 }
 
 .contact-container {
@@ -23,6 +24,7 @@ body, html {
     padding: 30px;
     max-width: 500px;
     width: 100%;
+    margin-top: 20px; /* Added margin to the top */
 }
 
 .main-title {
@@ -45,7 +47,7 @@ body, html {
 }
 
 .input-container {
-    margin-bottom: 20px;
+    margin-bottom: 1px;
 }
 
 .input-label {

@@ -1,5 +1,6 @@
 import { Link } from "react-scroll";
 import logo from '.././img/IAlogo.png'
+import '../styles/navbar.css';
 function Navbar() {
   document.addEventListener("scroll", function (e) {
     if (window.screen.width < 768 && window.scrollY > 690) {
@@ -73,7 +74,7 @@ function Navbar() {
               <Link
                 onClick={openBar}
                 activeClass="active"
-                to="services"
+                to="services-container"
                 spy={true}
                 smooth={true}
                 duration={1000}
@@ -104,6 +105,18 @@ function Navbar() {
                 activeClass="active"
               >
                 Contact
+              </Link>
+            </li>
+            <li>
+              <Link
+                onClick={openBar}
+                activeClass="active"
+                to="team-section"
+                spy={true}
+                smooth={true}
+                duration={1000}
+              >
+                Team
               </Link>
             </li>
           </ul>

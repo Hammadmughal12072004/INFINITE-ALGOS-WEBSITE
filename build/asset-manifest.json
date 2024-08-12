@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.30aae39d.css",
+    "main.js": "/static/js/main.bd069354.js",
+    "static/js/453.07fc8f6e.chunk.js": "/static/js/453.07fc8f6e.chunk.js",
+    "static/media/gameDev.jpg": "/static/media/gameDev.7e189c69aaad8441ccce.jpg",
+    "static/media/hiring.jpg": "/static/media/hiring.54c88ba531c798c4d8c3.jpg",
+    "static/media/mobileDev.jpg": "/static/media/mobileDev.f84e36385097ad15bb17.jpg",
+    "static/media/webDev.jpg": "/static/media/webDev.dfff36b1899efd0bee6e.jpg",
+    "static/media/mlDev.jpg": "/static/media/mlDev.9601d2de29e700d35686.jpg",
+    "static/media/IAlogo.png": "/static/media/IAlogo.1f48e44156679118be91.png",
+    "static/media/aboutUs.jpg": "/static/media/aboutUs.b251ad43994a9cf493d8.jpg",
+    "index.html": "/index.html",
+    "main.30aae39d.css.map": "/static/css/main.30aae39d.css.map",
+    "main.bd069354.js.map": "/static/js/main.bd069354.js.map",
+    "453.07fc8f6e.chunk.js.map": "/static/js/453.07fc8f6e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.30aae39d.css",
+    "static/js/main.bd069354.js"
+  ]
+}
