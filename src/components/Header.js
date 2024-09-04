@@ -41,7 +41,7 @@ function Header() {
             {!loading && (
                 <>
                     <div className="video-container">
-                        <video src={process.env.PUBLIC_URL + "/cover.mp4"} loop autoPlay muted className="video-bg"></video>
+                        <video src={process.env.PUBLIC_URL + "/cover.mp4"} loop autoPlay muted className="video-bg" playsInline></video>
                     </div>
                     <div className="text-overlay">
                         <h1 className="animated-text">

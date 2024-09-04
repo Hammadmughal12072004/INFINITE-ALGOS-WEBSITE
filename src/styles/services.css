@@ -1,41 +1,38 @@
 .services-container {
-  padding: 20px;
+  padding: 50px 20px; /* Padding adjustments to provide more space */
   background-color: #f4f4f4;
   text-align: center;
-}
-
-.services-heading {
-  font-size: 2em;
-  margin-bottom: 20px;
-  color: #333;
+  max-width: 1200px; /* Restrict the container width to fit content */
+  margin: 0 auto; /* Center the container */
 }
 
 .services-cards {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 20px; /* Add some space between cards */
+  justify-content: space-between; /* Spread cards evenly */
+  flex-wrap: nowrap; /* Prevent wrapping to a new line */
+  gap: 20px; /* Adjusted gap to prevent overflow */
 }
 
 .services-card {
   background-color: #fff;
   border-radius: 10px;
-  width: 23%;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
+  width: 23%; /* Ensures four cards fit in one row */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding-bottom: 10px;
-  justify-content: space-between; /* Distributes space between elements */
+  padding: 15px;
+  flex-shrink: 0; /* Prevent cards from shrinking */
 }
 
 .card-image {
   width: 100%;
-  height: 180px;
+  height: 200px;
   overflow: hidden;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .card-image img {
@@ -46,14 +43,14 @@
 
 .card-content {
   padding: 20px;
-  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Center content vertically */
+  justify-content: center;
 }
 
 .card-content h2 {
-  margin-top: 0;
+  margin: 15px 0;
+  font-size: 1.5em;
   color: #333;
 }
 
@@ -61,40 +58,43 @@
   color: #666;
   font-size: 14px;
   line-height: 1.6;
+  text-align: left;
+  padding: 0 10px;
 }
 
 .learn-more-button {
-  display: inline-block;
-  padding: 10px 20px; /* More padding for better visibility */
-  background-color: #007bff;
+  background-color: #800080;
   color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 20px;
   font-weight: bold;
-  text-align: center;
+  padding: 10px 30px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
 }
 
-.card-dots {
-  display: flex;
-  justify-content: center;
-  padding: 10px;
+.learn-more-button:hover {
+  background-color: #660066;
 }
 
-.card-dots div {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #ccc;
-  margin: 0 5px;
+@media (max-width: 1200px) {
+  .services-card {
+    width: 24%; /* Slightly increase card width on medium screens */
+  }
 }
 
-.card-dots div.active {
-  background-color: #333;
+@media (max-width: 1024px) {
+  .services-cards {
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  }
+
+  .services-card {
+    width: 48%; /* Two cards per row on smaller screens */
+    margin-bottom: 20px;
+  }
 }
 
-/* Responsive design */
 @media (max-width: 768px) {
   .services-cards {
     flex-direction: column;
@@ -102,6 +102,6 @@
   }
 
   .services-card {
-    width: 95%;
+    width: 90%; /* Full width on very small screens */
   }
 }

@@ -30,6 +30,12 @@ function Footer() {
             <li>
               <Link to="full-screen-container" spy={true} smooth={true} duration={1000}> Contact </Link>
             </li>
+            <li>
+              <Link to="team-section" spy={true} smooth={true} duration={1000}> Team</Link>
+            </li>
+            <li>
+              <Link to="director-container" spy={true} smooth={true} duration={1000}> Directors </Link>
+            </li>
           </ul>
         </div>
 

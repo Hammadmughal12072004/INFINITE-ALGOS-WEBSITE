@@ -11,7 +11,6 @@ const FloatingWhatsAppButton = () => {
 
     return (
         <div className="floating-whatsapp-container" onClick={handleButtonClick}>
-            <div className="floating-text">How can I help you?</div>
             <div className="floating-whatsapp-button">
                 <img
                     src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
@@ -19,6 +18,7 @@ const FloatingWhatsAppButton = () => {
                     className="whatsapp-icon"
                 />
             </div>
+            <div className="floating-text">How can I help you?</div>
         </div>
     );
 };

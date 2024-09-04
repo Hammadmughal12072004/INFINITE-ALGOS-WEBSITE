@@ -2,8 +2,6 @@ import hiring from '../img/hiring.jpg';
 import '../styles/hiring.css'; // Import your CSS file for styling
 import { Link } from "react-scroll";
 
-
-
 function Hiring() {
   return (
       <>
@@ -38,7 +36,7 @@ function Hiring() {
             </Link>
           </div>
           <div className="image-content">
-            <img alt="Hiring" src={hiring} className="img-fluid" />
+            <img alt="Hiring" src={hiring} className="img-fluid" loading="lazy" />
           </div>
         </div>
       </>

@@ -118,6 +118,18 @@ function Navbar() {
               >
                 Team
               </Link>
+              </li>
+              <li>
+              <Link
+                onClick={openBar}
+                activeClass="active"
+                to="director-container"
+                spy={true}
+                smooth={true}
+                duration={1000}
+              >
+                Directors
+              </Link>
             </li>
           </ul>
           <div className="button" onClick={openBar}>
