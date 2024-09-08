@@ -20,13 +20,19 @@ function Team() {
   }, []);
 
   const handlePrev = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === 0 ? teamData.length - 3 : prevIndex - 3));
+    setCurrentIndex((prevIndex) => {
+      const itemsToShow = window.innerWidth <= 768 ? 1 : 3;  // Show 1 item on mobile, 3 on larger screens
+      return prevIndex === 0 ? teamData.length - itemsToShow : prevIndex - itemsToShow;
+    });
   };
-
+  
   const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex >= teamData.length - 3 ? 0 : prevIndex + 3));
+    setCurrentIndex((prevIndex) => {
+      const itemsToShow = window.innerWidth <= 768 ? 1 : 3;  // Show 1 item on mobile, 3 on larger screens
+      return prevIndex >= teamData.length - itemsToShow ? 0 : prevIndex + itemsToShow;
+    });
   };
-
+  
   const visibleTeamMembers = teamData.slice(currentIndex, currentIndex + 3);
 
   return (

@@ -5,6 +5,7 @@ import axios from "axios";
 function Director() {
   const [directors, setDirectors] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
 
   useEffect(() => {
     const fetchDirectors = async () => {
@@ -17,12 +18,22 @@ function Director() {
     };
 
     fetchDirectors();
+
+    const updateScreenSize = () => {
+      setIsSmallScreen(window.innerWidth <= 768); // Set to true if screen is small
+    };
+
+    window.addEventListener("resize", updateScreenSize);
+    updateScreenSize(); // Set initial screen size
+
+    return () => window.removeEventListener("resize", updateScreenSize);
   }, []);
 
   // Handle previous slide
   const handlePrev = () => {
     setCurrentIndex((prevIndex) => {
-      const newIndex = prevIndex === 0 ? directors.length - 3 : prevIndex - 3;
+      const offset = isSmallScreen ? 1 : 3; // Slide one on small screens, three on large
+      const newIndex = prevIndex === 0 ? directors.length - offset : prevIndex - offset;
       return newIndex < 0 ? 0 : newIndex;
     });
   };
@@ -30,12 +41,12 @@ function Director() {
   // Handle next slide
   const handleNext = () => {
     setCurrentIndex((prevIndex) => {
-      const newIndex = prevIndex + 3 >= directors.length ? 0 : prevIndex + 3;
+      const offset = isSmallScreen ? 1 : 3;
+      const newIndex = prevIndex + offset >= directors.length ? 0 : prevIndex + offset;
       return newIndex;
     });
   };
 
-  // Render the director component
   return (
     <div className="director-container">
       <h2 className="our-team">Board of Directors</h2>
@@ -47,7 +58,7 @@ function Director() {
 
         {/* Display the director cards */}
         <div className="team-members">
-          {directors.slice(currentIndex, currentIndex + 3).map((director, index) => (
+          {directors.slice(currentIndex, currentIndex + (isSmallScreen ? 1 : 3)).map((director, index) => (
             <div key={index} className="member">
               <img src={director.image} alt={director.name} />
               <div className="info">

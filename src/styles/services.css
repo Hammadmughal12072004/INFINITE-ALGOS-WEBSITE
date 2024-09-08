@@ -1,22 +1,23 @@
 .services-container {
-  padding: 50px 20px; /* Padding adjustments to provide more space */
+  padding: 30px 20px;
   background-color: #f4f4f4;
   text-align: center;
-  max-width: 1200px; /* Restrict the container width to fit content */
-  margin: 0 auto; /* Center the container */
+  max-width: 1280px;
+  margin: 0 auto; /* Center the container horizontally */
+  margin-right: 6%; /* Move the container to the left */
 }
 
 .services-cards {
   display: flex;
-  justify-content: space-between; /* Spread cards evenly */
-  flex-wrap: nowrap; /* Prevent wrapping to a new line */
-  gap: 20px; /* Adjusted gap to prevent overflow */
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 20px;
 }
 
 .services-card {
   background-color: #fff;
   border-radius: 10px;
-  width: 23%; /* Ensures four cards fit in one row */
+  width: 23%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   display: flex;
@@ -24,7 +25,7 @@
   align-items: center;
   text-align: center;
   padding: 15px;
-  flex-shrink: 0; /* Prevent cards from shrinking */
+  flex-shrink: 0;
 }
 
 .card-image {
@@ -78,30 +79,61 @@
   background-color: #660066;
 }
 
+.mobile-services {
+  display: none;
+}
+
 @media (max-width: 1200px) {
   .services-card {
-    width: 24%; /* Slightly increase card width on medium screens */
+    width: 24%;
   }
 }
 
 @media (max-width: 1024px) {
   .services-cards {
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    flex-wrap: wrap;
   }
-
+  
   .services-card {
-    width: 48%; /* Two cards per row on smaller screens */
+    width: 48%;
     margin-bottom: 20px;
   }
 }
 
 @media (max-width: 768px) {
   .services-cards {
-    flex-direction: column;
+    display: none;
+  }
+  
+  .mobile-services {
+    display: flex;
     align-items: center;
+    justify-content: space-between;
   }
-
+  
   .services-card {
-    width: 90%; /* Full width on very small screens */
+    width: 80%;
   }
+  
+  .nav-button {
+    /* background-color: #800080; */
+    color: #1a1818;
+    border: none;
+    background-color: transparent;
+    /* border-radius: 50%; */
+    
+    width: 5px;
+    height: 40px;
+    font-size: 2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    
+   
+  }
+  
+  
 }

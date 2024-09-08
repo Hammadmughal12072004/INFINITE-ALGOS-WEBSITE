@@ -15,14 +15,16 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  height: 100vh; /* Fix height to the viewport height */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  overflow: hidden; /* Ensure no overflow within the header */
 }
+
 
 .App-link {
   color: #61dafb;
@@ -38,15 +40,30 @@
 }
 
 .gotop {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #000;
-    border: none;
-    border-radius: 50%;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 1000;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #000;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1000;
+  transition: visibility 0.3s,
+
+}
+
+@media (max-width: 768px) {
+  .App-header {
+    font-size: calc(8px + 2vmin); /* Adjust font size for small screens */
+  }
+  
+  .gotop {
+    bottom: 10px;
+    right: 10px; /* Adjust button position on small screens */
+  }
+
+
 }
 
 .gotop.disabled {
@@ -58,4 +75,12 @@
 .gotop-img {
     width: 20px;
     height: 20px;
+}
+
+/* Prevent horizontal scrolling */
+body, html {
+  overflow-x: hidden;
+  margin: 0; /* Make sure there's no margin causing overflow */
+  padding: 0;
+  box-sizing: border-box;
 }

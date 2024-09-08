@@ -1,3 +1,4 @@
+/* General Styles */
 .director-container {
   padding: 40px 20px;
   background-color: #f5f5f5;
@@ -17,14 +18,14 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  overflow: hidden; /* Ensure no overflow issues */
 }
 
 .team-members {
   display: flex;
   justify-content: center;
   gap: 20px;
-  overflow: hidden;
-  width: 80%; /* Adjusted width for the card container */
+  transition: transform 0.3s ease; /* Smooth transition for sliding effect */
 }
 
 .member {
@@ -84,24 +85,14 @@
 }
 
 /* Responsive layout */
-@media screen and (max-width: 1024px) {
-  .team-members {
-    justify-content: center;
-  }
-
-  .member {
-    flex: 1 0 300px;
-  }
-}
-
 @media screen and (max-width: 768px) {
   .team-members {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    transform: translateX(0); /* Prevent overlapping content */
   }
 
   .member {
-    width: 100%;
-    max-width: 350px;
+    flex: 1 0 100%; /* Show only one member at a time */
+    max-width: none; /* Remove max-width to allow full width */
   }
 }

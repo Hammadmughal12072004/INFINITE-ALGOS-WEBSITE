@@ -10,34 +10,35 @@ body, html {
 .full-screen-container {
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Changed from center to flex-start */
+    align-items: center; /* Center items vertically */
     width: 100%;
     height: 100vh; /* Ensure it takes full height of the viewport */
     padding: 20px;
-    padding-top: 80px; /* Increased padding to the top */
+    padding-top: 30px;
+
 }
 
 .contact-container {
     background: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    padding: 30px;
-    max-width: 500px;
+    padding: 20px; /* Reduced padding */
+    max-width: 400px; /* Reduced maximum width */
     width: 100%;
-    margin-top: 20px; /* Added margin to the top */
+    margin: 0 auto; /* Center the container horizontally */
 }
 
 .main-title {
-    font-size: 2rem;
+    font-size: 1.75rem; /* Reduced font size */
     color: #333;
     margin-bottom: 10px;
     text-align: center;
 }
 
 .sub-heading {
-    font-size: 1.2rem;
+    font-size: 1rem; /* Reduced font size */
     color: #666;
-    margin-bottom: 30px;
+    margin-bottom: 20px; /* Reduced margin */
     text-align: center;
 }
 
@@ -47,11 +48,11 @@ body, html {
 }
 
 .input-container {
-    margin-bottom: 1px;
+    margin-bottom: 15px; /* Adjusted margin */
 }
 
 .input-label {
-    font-size: 1rem;
+    font-size: 0.875rem; /* Reduced font size */
     color: #333;
     margin-bottom: 5px;
     display: block;
@@ -59,26 +60,26 @@ body, html {
 
 .contact-input, .contact-textarea, .input {
     width: 100%;
-    padding: 10px;
+    padding: 8px; /* Reduced padding */
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 1rem;
-    font-family: 'Arial', sans-serif; /* Ensure the font matches */
+    font-size: 0.875rem; /* Reduced font size */
+    font-family: 'Arial', sans-serif;
 }
 
 .contact-textarea {
     resize: vertical;
-    height: 100px;
+    height: 80px; /* Reduced height */
 }
 
 .contact-input::placeholder, .contact-textarea::placeholder, .input::placeholder {
-    color: #aaa; /* Adjust placeholder color if needed */
-    font-family: 'Arial', sans-serif; /* Ensure all placeholder text uses the same font */
+    color: #aaa; /* Placeholder color */
+    font-family: 'Arial', sans-serif;
 }
 
 .error {
     color: red;
-    font-size: 0.875rem;
+    font-size: 0.75rem; /* Reduced font size */
     margin-top: 5px;
 }
 
@@ -86,11 +87,12 @@ body, html {
     background: #8906e6;
     color: white;
     border: none;
-    padding: 15px;
-    font-size: 1rem;
+    padding: 10px; /* Reduced padding */
+    font-size: 0.875rem; /* Reduced font size */
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s ease;
+    width: 100%; /* Full width for the button */
 }
 
 .form-btn:hover {
@@ -100,33 +102,33 @@ body, html {
 /* Responsive Design */
 @media screen and (max-width: 768px) {
     .main-title {
-        font-size: 1.75rem;
+        font-size: 1.5rem; /* Adjusted font size */
     }
 
     .sub-heading {
-        font-size: 1.1rem;
+        font-size: 0.875rem; /* Adjusted font size */
     }
 
     .contact-container {
-        padding: 20px;
+        padding: 15px; /* Adjusted padding */
     }
 }
 
 @media screen and (max-width: 480px) {
     .main-title {
-        font-size: 1.5rem;
+        font-size: 1.25rem; /* Adjusted font size */
     }
 
     .sub-heading {
-        font-size: 1rem;
+        font-size: 0.75rem; /* Adjusted font size */
     }
 
     .contact-container {
-        padding: 10px;
+        padding: 10px; /* Adjusted padding */
     }
 
     .form-btn {
-        padding: 10px;
-        font-size: 0.875rem;
+        padding: 8px; /* Adjusted padding */
+        font-size: 0.75rem; /* Adjusted font size */
     }
 }
